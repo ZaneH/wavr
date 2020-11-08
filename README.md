@@ -1,5 +1,5 @@
-# Wavegrid
-A free marketplace for creators.
+# Wavr
+A free marketplace for creators
 
 This project wasn't intended to be open-sourced, but during beta, I found a competitor that was lightyears ahead of Wavr (https://matter.online/).
 
