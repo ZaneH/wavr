@@ -1,0 +1,3 @@
+mutation VerifyWithdraw($token: String!) {
+    verifyWithdraw(token: $token)
+}

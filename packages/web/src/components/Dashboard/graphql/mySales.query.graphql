@@ -1,0 +1,15 @@
+query MySales {
+  mySales {
+    id
+    createdAt
+    amount
+    product {
+      id
+      createdAt
+      name
+      owner {
+        id
+      }
+    }
+  }
+}

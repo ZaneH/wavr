@@ -1,0 +1,141 @@
+{
+  "version": "0.3.14-fixed",
+  "steps": [
+    {
+      "tag": "UpdateField",
+      "model": "User",
+      "field": "id",
+      "type": "String"
+    },
+    {
+      "tag": "UpdateArgument",
+      "location": {
+        "tag": "Directive",
+        "path": {
+          "tag": "Field",
+          "model": "User",
+          "field": "id"
+        },
+        "directive": "default"
+      },
+      "argument": "",
+      "newValue": "uuid()"
+    },
+    {
+      "tag": "UpdateField",
+      "model": "Product",
+      "field": "id",
+      "type": "String"
+    },
+    {
+      "tag": "UpdateArgument",
+      "location": {
+        "tag": "Directive",
+        "path": {
+          "tag": "Field",
+          "model": "Product",
+          "field": "id"
+        },
+        "directive": "default"
+      },
+      "argument": "",
+      "newValue": "uuid()"
+    },
+    {
+      "tag": "UpdateField",
+      "model": "Product",
+      "field": "ownerId",
+      "type": "String"
+    },
+    {
+      "tag": "UpdateField",
+      "model": "Transaction",
+      "field": "id",
+      "type": "String"
+    },
+    {
+      "tag": "UpdateArgument",
+      "location": {
+        "tag": "Directive",
+        "path": {
+          "tag": "Field",
+          "model": "Transaction",
+          "field": "id"
+        },
+        "directive": "default"
+      },
+      "argument": "",
+      "newValue": "uuid()"
+    },
+    {
+      "tag": "UpdateField",
+      "model": "Transaction",
+      "field": "buyerId",
+      "type": "String"
+    },
+    {
+      "tag": "UpdateField",
+      "model": "Transaction",
+      "field": "productId",
+      "type": "String"
+    },
+    {
+      "tag": "UpdateField",
+      "model": "Tag",
+      "field": "id",
+      "type": "String"
+    },
+    {
+      "tag": "UpdateArgument",
+      "location": {
+        "tag": "Directive",
+        "path": {
+          "tag": "Field",
+          "model": "Tag",
+          "field": "id"
+        },
+        "directive": "default"
+      },
+      "argument": "",
+      "newValue": "uuid()"
+    },
+    {
+      "tag": "UpdateField",
+      "model": "Tag",
+      "field": "creatorId",
+      "type": "String"
+    },
+    {
+      "tag": "UpdateField",
+      "model": "Review",
+      "field": "id",
+      "type": "String"
+    },
+    {
+      "tag": "UpdateArgument",
+      "location": {
+        "tag": "Directive",
+        "path": {
+          "tag": "Field",
+          "model": "Review",
+          "field": "id"
+        },
+        "directive": "default"
+      },
+      "argument": "",
+      "newValue": "uuid()"
+    },
+    {
+      "tag": "UpdateField",
+      "model": "Review",
+      "field": "productId",
+      "type": "String"
+    },
+    {
+      "tag": "UpdateField",
+      "model": "Review",
+      "field": "authorId",
+      "type": "String"
+    }
+  ]
+}

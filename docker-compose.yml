@@ -1,0 +1,24 @@
+version: '3'
+services:
+  backend:
+    image: 455973541253.dkr.ecr.us-east-2.amazonaws.com/wavr-backend
+    ports:
+      - "4000:4000"
+    logging:
+      driver: awslogs
+      options: 
+        awslogs-group: wavr-backend
+        awslogs-region: us-east-2
+        awslogs-stream-prefix: wavr
+  postgres-db:
+    image: postgres:12.4
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: zane
+      POSTGRES_PASSWORD: password
+    volumes:
+      - postgres:/var/lib/postgresql/data
+volumes:
+  postgres: ~

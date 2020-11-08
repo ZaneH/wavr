@@ -1,0 +1,12 @@
+query TaggedProducts($id: String!, $first: Int!, $after: ProductWhereUniqueInput, $where: TagProductsWhereInput) {
+  tag(where: { id: $id }) {
+    id
+    name
+    products(first: $first, after: $after, where: $where) {
+      ...productFragment
+      owner {
+        ...userDisplayFragment
+      }
+    }
+  }
+}

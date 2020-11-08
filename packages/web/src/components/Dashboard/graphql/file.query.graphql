@@ -1,0 +1,8 @@
+query GetFiles($where: QueryFilesWhereInput!) {
+    files(where: $where) {
+        id
+        createdAt
+        name
+        url
+    }
+}

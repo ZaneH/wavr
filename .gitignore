@@ -1,0 +1,8 @@
+node_modules/
+dist/
+src/generated/
+*.env*
+yarn-error.log
+.vercel
+deploy.sh
+.git.bk/

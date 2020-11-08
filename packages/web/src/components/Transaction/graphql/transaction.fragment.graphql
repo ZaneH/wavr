@@ -1,0 +1,32 @@
+fragment transactionFragment on Transaction {
+  id
+  amount
+  createdAt
+  buyer {
+    id
+  }
+}
+
+fragment transactionNoBuyerFragment on Transaction {
+  id
+  amount
+  createdAt
+}
+
+fragment transactionLicenseKeyFragment on Transaction {
+  ...transactionFragment
+  licenseKey
+}
+
+fragment transactionProductsFragment on Transaction {
+  ...transactionFragment
+  licenseKey
+  products {
+    id
+    name
+    images
+    owner {
+      ...userDisplayFragment
+    }
+  }
+}

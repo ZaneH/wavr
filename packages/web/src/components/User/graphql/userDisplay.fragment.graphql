@@ -1,0 +1,7 @@
+fragment userDisplayFragment on User {
+    id
+    username
+    isVerified
+    displayName
+    avatarURL
+}

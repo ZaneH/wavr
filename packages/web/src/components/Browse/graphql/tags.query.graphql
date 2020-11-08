@@ -1,0 +1,5 @@
+query Tags($first: Int) {
+    tags(first: $first) {
+        ...tagFragment
+    }
+}

@@ -1,0 +1,8 @@
+query NewProducts($count: Int!) {
+  products(orderBy: { createdAt: desc }, first: $count) {
+      ...productDisplayFragment
+      owner {
+          ...userDisplayFragment
+      }
+  }
+}

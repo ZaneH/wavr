@@ -1,0 +1,8 @@
+query FeaturedProducts($first: Int, $after: ProductWhereUniqueInput) {
+  featuredProducts(first: $first, after: $after) {
+    ...productDisplayFragment
+    owner {
+      ...userDisplayFragment
+    }
+  }
+}

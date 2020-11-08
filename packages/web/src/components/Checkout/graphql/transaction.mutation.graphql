@@ -1,0 +1,11 @@
+mutation CreateTransaction($data: TransactionCreateInput!) {
+    createOneTransaction(data: $data) {
+        ...transactionFragment
+    }
+}
+
+mutation RedeemKey($key: String!) {
+    redeemKey(key: $key) {
+        ...transactionFragment
+    }
+}

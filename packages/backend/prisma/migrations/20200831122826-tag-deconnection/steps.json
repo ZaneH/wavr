@@ -1,0 +1,22 @@
+{
+  "version": "0.3.14-fixed",
+  "steps": [
+    {
+      "tag": "CreateField",
+      "model": "Tag",
+      "field": "products",
+      "type": "Product",
+      "arity": "List"
+    },
+    {
+      "tag": "DeleteField",
+      "model": "Tag",
+      "field": "product"
+    },
+    {
+      "tag": "DeleteField",
+      "model": "Tag",
+      "field": "productId"
+    }
+  ]
+}

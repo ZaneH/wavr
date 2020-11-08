@@ -1,0 +1,11 @@
+mutation CreateProduct($data: ProductCreateInput!) {
+    createOneProduct(data: $data) {
+        ...productFragment
+    }
+}
+
+mutation UpdateProduct($where: ProductWhereUniqueInput!, $data: ProductUpdateInput!) {
+    updateOneProduct(where: $where, data: $data) {
+        ...productFragment
+    }
+}

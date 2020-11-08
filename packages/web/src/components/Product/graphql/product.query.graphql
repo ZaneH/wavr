@@ -1,0 +1,42 @@
+query Product($where: ProductWhereUniqueInput!) {
+  product(where: $where) {
+    ...productFragment
+    tags {
+      id
+      name
+    }
+    owner {
+      ...userDisplayFragment
+    }
+  }
+}
+
+query ProductCount($username: String) {
+  productCount(username: $username)
+}
+
+query ProductImage($where: ProductWhereUniqueInput!) {
+  product(where: $where) {
+    images
+  }
+}
+
+query ProductPrice($where: ProductWhereUniqueInput!) {
+  product(where: $where) {
+    amount
+  }
+}
+
+query Products(
+  $where: QueryProductsWhereInput
+  $orderBy: [QueryProductsOrderByInput!]
+  $after: ProductWhereUniqueInput
+  $first: Int
+) {
+  products(where: $where, orderBy: $orderBy, after: $after, first: $first) {
+    ...productDisplayFragment
+    owner {
+      ...userDisplayFragment
+    }
+  }
+}

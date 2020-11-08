@@ -1,0 +1,10 @@
+mutation StartAd($productId: String!) {
+  startAd(productId: $productId) {
+    id
+    createdAt
+    expiresAt
+    product {
+      name
+    }
+  }
+}

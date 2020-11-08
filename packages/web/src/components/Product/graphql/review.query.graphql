@@ -1,0 +1,8 @@
+query Reviews(
+  $where: QueryReviewsWhereInput!
+  $orderBy: [ReviewOrderByInput!]
+) {
+  reviews(where: $where, orderBy: $orderBy) {
+    ...reviewFragment
+  }
+}

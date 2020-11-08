@@ -1,0 +1,17 @@
+fragment promoCodeFragment on PromoCode {
+    id
+    isArchived
+    createdAt
+    expiresAt
+    code
+    uses
+    useLimit
+    percentOff
+    user {
+        id
+    }
+    product {
+        id
+        name
+    }
+}

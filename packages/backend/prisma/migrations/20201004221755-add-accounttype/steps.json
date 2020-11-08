@@ -1,0 +1,46 @@
+{
+  "version": "0.3.14-fixed",
+  "steps": [
+    {
+      "tag": "CreateEnum",
+      "enum": "AccountType",
+      "values": [
+        "FREE",
+        "PRO",
+        "PROPLUS"
+      ]
+    },
+    {
+      "tag": "CreateField",
+      "model": "User",
+      "field": "accountType",
+      "type": "AccountType",
+      "arity": "Required"
+    },
+    {
+      "tag": "CreateDirective",
+      "location": {
+        "path": {
+          "tag": "Field",
+          "model": "User",
+          "field": "accountType"
+        },
+        "directive": "default"
+      }
+    },
+    {
+      "tag": "CreateArgument",
+      "location": {
+        "tag": "Directive",
+        "path": {
+          "tag": "Field",
+          "model": "User",
+          "field": "accountType"
+        },
+        "directive": "default"
+      },
+      "argument": "",
+      "value": "FREE"
+    }
+  ]
+}

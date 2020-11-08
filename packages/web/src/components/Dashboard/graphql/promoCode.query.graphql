@@ -1,0 +1,5 @@
+query PromoCodes($where: QueryPromoCodesWhereInput!) {
+    promoCodes(where: $where) {
+        ...promoCodeFragment
+    }
+}

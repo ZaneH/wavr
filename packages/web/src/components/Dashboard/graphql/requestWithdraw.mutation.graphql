@@ -1,0 +1,3 @@
+mutation RequestWithdraw($id: String!) {
+    requestWithdraw(id: $id)
+}

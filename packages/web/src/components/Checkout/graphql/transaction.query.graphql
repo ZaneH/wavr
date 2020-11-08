@@ -1,0 +1,24 @@
+query TransactionWithLicenseKey($where: TransactionWhereUniqueInput!) {
+  transaction(where: $where) {
+    ...transactionLicenseKeyFragment
+  }
+}
+
+query Transactions(
+  $where: QueryTransactionsWhereInput!
+  $orderBy: [TransactionOrderByInput!]
+) {
+  transactions(where: $where, orderBy: $orderBy) {
+    ...transactionNoBuyerFragment
+  }
+}
+
+query TransactionProducts($where: TransactionWhereUniqueInput!) {
+  transaction(where: $where) {
+    ...transactionProductsFragment
+  }
+}
+
+query GetFileUrls($licenseKey: String!) {
+  getFileURLs(licenseKey: $licenseKey)
+}

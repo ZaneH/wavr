@@ -1,0 +1,17 @@
+{
+  "version": "0.3.14-fixed",
+  "steps": [
+    {
+      "tag": "CreateField",
+      "model": "Product",
+      "field": "transactions",
+      "type": "Transaction",
+      "arity": "List"
+    },
+    {
+      "tag": "DeleteField",
+      "model": "Product",
+      "field": "Transaction"
+    }
+  ]
+}

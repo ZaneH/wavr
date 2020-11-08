@@ -1,0 +1,19 @@
+fragment userFragment on User {
+  adTokens
+  email
+  isVerified
+  discordId
+  createdAt
+  ...userDisplayFragment
+  emailVerified
+  emailOnSale
+  emailUpdates
+  transactions {
+    ...transactionFragment
+  }
+}
+
+fragment userBalanceFragment on User {
+  unpaidBalance
+  paidBalance
+}

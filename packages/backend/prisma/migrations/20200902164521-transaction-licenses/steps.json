@@ -1,0 +1,38 @@
+{
+  "version": "0.3.14-fixed",
+  "steps": [
+    {
+      "tag": "CreateField",
+      "model": "Transaction",
+      "field": "email",
+      "type": "String",
+      "arity": "Optional"
+    },
+    {
+      "tag": "CreateField",
+      "model": "Transaction",
+      "field": "licenseKey",
+      "type": "String",
+      "arity": "Optional"
+    },
+    {
+      "tag": "CreateField",
+      "model": "Transaction",
+      "field": "licenseRedeemed",
+      "type": "Boolean",
+      "arity": "Required"
+    },
+    {
+      "tag": "UpdateField",
+      "model": "Transaction",
+      "field": "buyer",
+      "arity": "Optional"
+    },
+    {
+      "tag": "UpdateField",
+      "model": "Transaction",
+      "field": "buyerId",
+      "arity": "Optional"
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+mutation CreateReview($data: ReviewCreateInput!) {
+    createOneReview(data: $data) {
+        ...reviewFragment
+    }
+}

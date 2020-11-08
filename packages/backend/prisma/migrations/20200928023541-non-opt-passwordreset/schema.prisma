@@ -1,0 +1,131 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgres"
+  url = "***"
+}
+
+model User {
+  id                 String        @default(uuid()) @id
+  adTokens           Int           @default(0)
+  avatarURL          String?
+  createdAt          DateTime      @default(now())
+  createdTags        Tag[]
+  displayName        String?
+  email              String        @unique
+  emailVerified      Boolean       @default(false)
+  emailVerifyToken   String        @unique @default(cuid())
+  password           String
+  passwordResetToken String        @unique @default(cuid())
+  products           Product[]
+  promoCodes         PromoCode[]
+  reviews            Review[]
+  transactions       Transaction[]
+  updatedAt          DateTime      @updatedAt
+  username           String        @unique
+
+  // balance
+  unpaidBalance Float @default(0)
+  paidBalance   Float @default(0)
+
+  // email preferences
+  emailOnSale  Boolean @default(true)
+  emailUpdates Boolean @default(true)
+}
+
+model Product {
+  id           String        @default(uuid()) @id
+  amount       Float         @default(0)
+  createdAt    DateTime      @default(now())
+  description  String
+  name         String
+  onSale       Boolean       @default(false)
+  salePrice    Float?
+  owner        User?         @relation(fields: [ownerId], references: [id])
+  ownerId      String?
+  reviews      Review[]
+  tags         Tag[]
+  transactions Transaction[]
+  updatedAt    DateTime      @updatedAt
+  images       Image[]
+  isArchived   Boolean       @default(false)
+  file         File?         @relation(fields: [fileId], references: [id])
+  fileId       String?
+  promoCodes   PromoCode[]
+}
+
+model Transaction {
+  id              String    @default(uuid()) @id
+  amount          Float     @default(0)
+  approved        Boolean   @default(false)
+  buyer           User?     @relation(fields: [buyerId], references: [id])
+  buyerId         String?
+  createdAt       DateTime  @default(now())
+  email           String?
+  licenseKey      String?   @unique
+  licenseRedeemed Boolean   @default(false)
+  licenseKeyShown Int       @default(0)
+  paypalPaymentId String?
+  products        Product[]
+  updatedAt       DateTime  @updatedAt
+}
+
+model Tag {
+  id        String    @default(uuid()) @id
+  createdAt DateTime  @default(now())
+  creator   User      @relation(fields: [creatorId], references: [id])
+  creatorId String
+  name      String
+  products  Product[]
+}
+
+model Review {
+  id         String   @default(uuid()) @id
+  author     User     @relation(fields: [authorId], references: [id])
+  authorId   String
+  createdAt  DateTime @default(now())
+  isArchived Boolean  @default(false)
+  message    String
+  product    Product  @relation(fields: [productId], references: [id])
+  productId  String
+  stars      Int
+  updatedAt  DateTime @updatedAt
+}
+
+model Image {
+  id         String   @default(uuid()) @id
+  createdAt  DateTime @default(now())
+  isArchived Boolean  @default(false)
+  product    Product? @relation(fields: [productId], references: [id])
+  productId  String?
+  secret     String   @unique
+  url        String   @unique
+}
+
+model File {
+  id         String   @default(uuid()) @id
+  createdAt  DateTime @default(now())
+  isArchived Boolean  @default(false)
+  name       String
+  secret     String   @unique
+  url        String   @unique
+  product    Product
+}
+
+model PromoCode {
+  id         String    @default(uuid()) @id
+  createdAt  DateTime  @default(now())
+  isArchived Boolean   @default(false)
+  affectsAll Boolean
+  code       String    @unique
+  expiresAt  DateTime?
+  percentOff Int
+  product    Product?  @relation(fields: [productId], references: [id])
+  productId  String?
+  useLimit   Int?
+  uses       Int       @default(0)
+  user       User      @relation(fields: [userId], references: [id])
+  userId     String
+}

@@ -1,0 +1,5 @@
+mutation SignUp($email: String!, $username: String!, $password: String!, $confirmPassword: String!) {
+    signup(email: $email, username: $username, password: $password, confirmPassword: $confirmPassword) {
+        ...authPayloadFragment
+    }
+}

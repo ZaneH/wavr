@@ -1,0 +1,25 @@
+{
+  "version": "0.3.14-fixed",
+  "steps": [
+    {
+      "tag": "UpdateField",
+      "model": "Transaction",
+      "field": "licenseKeyShown",
+      "type": "Int"
+    },
+    {
+      "tag": "UpdateArgument",
+      "location": {
+        "tag": "Directive",
+        "path": {
+          "tag": "Field",
+          "model": "Transaction",
+          "field": "licenseKeyShown"
+        },
+        "directive": "default"
+      },
+      "argument": "",
+      "newValue": "0"
+    }
+  ]
+}

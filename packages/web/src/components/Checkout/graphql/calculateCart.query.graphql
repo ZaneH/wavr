@@ -1,0 +1,3 @@
+query CalculateCart($productIds: [String!]!, $promoCode: String) {
+    calculateCart(productIds: $productIds, promoCode: $promoCode)
+}

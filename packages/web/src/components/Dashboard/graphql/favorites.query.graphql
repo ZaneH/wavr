@@ -1,0 +1,13 @@
+query GetFavoritesForUser($where: UserWhereUniqueInput!) {
+  user(where: $where) {
+    favorites {
+      id
+      images
+      name
+      owner {
+        displayName
+        username
+      }
+    }
+  }
+}

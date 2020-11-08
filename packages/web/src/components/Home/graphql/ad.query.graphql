@@ -1,0 +1,10 @@
+query GetRandomAd {
+  getRandomAd {
+    product {
+      ...productDisplayFragment
+      owner {
+        ...userDisplayFragment
+      }
+    }
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "version": "0.3.14-fixed",
+  "steps": [
+    {
+      "tag": "CreateField",
+      "model": "Product",
+      "field": "fileId",
+      "type": "String",
+      "arity": "Optional"
+    },
+    {
+      "tag": "CreateDirective",
+      "location": {
+        "path": {
+          "tag": "Field",
+          "model": "Product",
+          "field": "file"
+        },
+        "directive": "relation"
+      }
+    },
+    {
+      "tag": "CreateArgument",
+      "location": {
+        "tag": "Directive",
+        "path": {
+          "tag": "Field",
+          "model": "Product",
+          "field": "file"
+        },
+        "directive": "relation"
+      },
+      "argument": "fields",
+      "value": "[fileId]"
+    },
+    {
+      "tag": "CreateArgument",
+      "location": {
+        "tag": "Directive",
+        "path": {
+          "tag": "Field",
+          "model": "Product",
+          "field": "file"
+        },
+        "directive": "relation"
+      },
+      "argument": "references",
+      "value": "[id]"
+    },
+    {
+      "tag": "CreateField",
+      "model": "File",
+      "field": "Product",
+      "type": "Product",
+      "arity": "Required"
+    },
+    {
+      "tag": "DeleteField",
+      "model": "File",
+      "field": "product"
+    },
+    {
+      "tag": "DeleteField",
+      "model": "File",
+      "field": "productId"
+    }
+  ]
+}

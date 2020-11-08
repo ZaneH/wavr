@@ -1,0 +1,3 @@
+mutation ToggleFavorite($productId: String!) {
+    toggleFavorite(productId: $productId)
+}

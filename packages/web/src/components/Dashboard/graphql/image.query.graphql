@@ -1,0 +1,6 @@
+query GetImages($where: QueryImagesWhereInput!) {
+    images(where: $where) {
+        id
+        url
+    }
+}

@@ -1,0 +1,32 @@
+fragment productFragment on Product {
+  id
+  amount
+  description
+  name
+  createdAt
+  updatedAt
+  images
+  onSale
+  salePrice
+  stars
+  isFavorite
+  filename
+  hasReviewed
+  ownsProduct
+  transactions {
+    ...transactionFragment
+  }
+}
+
+fragment productDisplayFragment on Product {
+  id
+  amount
+  onSale
+  salePrice
+  description
+  name
+  createdAt
+  updatedAt
+  images
+  stars
+}

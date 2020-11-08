@@ -1,0 +1,423 @@
+.can-click {
+  cursor: pointer;
+}
+
+.larger-tag {
+  cursor: pointer;
+  padding: 4px 10px;
+  margin: 5px 0px;
+}
+
+.rs-dropdown-menu {
+  z-index: 1000 !important;
+}
+
+.rs-drawer-footer {
+  margin: -12px 20px 20px;
+}
+
+.rs-affix {
+  z-index: 100 !important;
+}
+
+.rs-sidebar {
+  z-index: 0;
+}
+
+.rs-panel-heading {
+  padding-bottom: 8px;
+}
+
+.rs-table-cell-content {
+  background-color: #0f131a;
+}
+
+.top-space {
+  margin-top: 32px;
+}
+
+.tiny-bottom-space {
+  margin-bottom: 8px;
+}
+
+.bottom-space {
+  margin-bottom: 32px;
+}
+
+.less-top-space {
+  margin-top: 16px;
+}
+
+.more-top-space {
+  margin-top: 64px;
+}
+
+.tiny-top-space {
+  margin-top: 8px;
+}
+
+.less-left-space {
+  margin-left: 16px;
+}
+
+.thumbnail {
+  display: inline-block;
+  overflow: visible;
+
+  .round-thumbnail {
+    overflow: hidden;
+    border-radius: 3px;
+  }
+
+  transition: transform 0.15s ease-in, box-shadow 0.2s ease-in;
+  box-shadow: 3px 3px 14px rgba(0, 0, 0, 0.2);
+
+  img {
+    display: block;
+    object-fit: cover;
+
+    width: 14vw;
+    height: 14vw;
+    -ms-interpolation-mode: bicubic;
+
+    width: 100%;
+    max-width: 200px;
+    max-height: 200px;
+  }
+}
+
+.thumbnail:hover {
+  transform: scale(1.025);
+  box-shadow: 3px 3px 14px rgba(36, 36, 36, 0.08);
+}
+
+/* On the EditProductModal */
+.thumbnail-preview {
+  img {
+    border-radius: 5px;
+
+    display: block;
+    object-fit: cover;
+
+    width: 70%;
+  }
+}
+
+.product-square {
+  cursor: pointer;
+}
+
+.product-square > h5 {
+  margin-top: 6px;
+}
+
+.product-square p {
+  color: #e9ebf085;
+}
+
+.not-responsive-product-square {
+  width: max-content;
+}
+
+.store-content img {
+  border-radius: 5px;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.site-footer {
+  background-color: #1a1d24b4;
+  padding: 4px 45px;
+  margin-top: 82px;
+}
+
+.site-footer .rs-navbar-header {
+  margin-top: 20px;
+}
+
+.site-footer > .rs-navbar.rs-navbar-default {
+  background-color: rgba(0, 0, 0, 0) !important;
+}
+
+.flex-wrapper {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.tag-grid-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  margin-top: 12px;
+
+  img {
+    border-radius: 6px;
+    min-width: 100%;
+    height: min-content;
+    max-height: 20vmin;
+    object-fit: cover;
+    margin-top: 2px;
+    padding: 0 1px;
+    transition: transform 0.25s ease-in, box-shadow 0.3s ease-in;
+  }
+}
+
+.tag-grid-container:hover {
+  img {
+    box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.2);
+    transform: scale(1.025);
+  }
+}
+
+.tag-grid-container > h4 {
+  @media (max-width: 767px) {
+    line-height: 1.25em;
+    font-size: 1.25em;
+  }
+
+  overflow: hidden;
+  z-index: 99;
+  color: white;
+  text-align: center;
+  margin: 0px auto;
+  position: absolute;
+  vertical-align: middle;
+  left: 12px;
+  right: 12px;
+}
+
+.cart-table.readonly-table {
+  img {
+    margin-left: 0;
+  }
+}
+
+.cart-table img {
+  height: 100%;
+  margin-top: -2px;
+  margin-left: 16px;
+  border-radius: 3px;
+}
+
+.middle-row {
+  line-height: 33px;
+}
+
+.owned-table img {
+  height: 100%;
+  margin-top: -2px;
+  margin-left: 16px;
+  border-radius: 3px;
+}
+
+.review-header-wrapper {
+  align-items: center;
+  line-height: 0;
+}
+
+.review-header {
+  align-items: initial;
+  line-height: 0;
+}
+
+.review-author {
+  margin-left: 12px;
+}
+
+.review-card {
+  border-radius: 5px;
+}
+
+.review-date {
+  font-size: 0.8em;
+  color: gray;
+  margin-top: 6px;
+}
+
+.used-key-text {
+  color: #f44336;
+  font-weight: bold;
+}
+
+.react-share__ShareButton {
+  margin-right: 12px;
+}
+
+.share-container {
+  display: inline-block;
+}
+
+.avatar-huge {
+  width: 20vh !important;
+  height: 20vh !important;
+
+  img {
+    object-fit: cover;
+    width: 20vh !important;
+    height: 20vh !important;
+  }
+}
+
+.avatar-upload-container {
+  position: relative;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  width: min-content;
+  user-select: none;
+}
+
+.avatar-upload-container h5 {
+  display: inline-block;
+  overflow: hidden;
+  z-index: 100;
+  color: rgba(255, 255, 255, 0);
+  text-align: center;
+  margin: 0px auto;
+  position: absolute;
+  vertical-align: middle;
+  left: 12px;
+  right: 12px;
+  cursor: default;
+}
+
+.avatar-upload {
+  cursor: pointer;
+  img {
+    transition: filter 0.1s ease-in;
+  }
+
+  h5 {
+    transition: color 0.1s ease-in;
+  }
+}
+
+.avatar-upload:hover {
+  img {
+    filter: brightness(30%);
+  }
+
+  h5 {
+    color: white;
+    display: inline-block;
+    cursor: pointer;
+  }
+}
+
+.avatar-picture img {
+  object-fit: cover;
+}
+
+.no-rsuite > * > .rs-uploader-trigger-btn {
+  width: min-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.token-button {
+  transition: transform 0.2s ease-in, box-shadow 0.2s ease-in;
+  background: rgb(195, 20, 50);
+  background: linear-gradient(
+    124deg,
+    rgba(195, 20, 50, 1) 0%,
+    rgb(105, 44, 117) 100%
+  );
+}
+
+.rs-nav > * > .token-button-container {
+  margin-left: 12px;
+}
+
+.token-button:active {
+  background: rgb(195, 20, 50);
+  background: linear-gradient(
+    124deg,
+    rgba(195, 20, 50, 1) 0%,
+    rgb(105, 44, 117) 100%
+  );
+}
+
+.token-button:hover {
+  transform: scale(1.03);
+  box-shadow: 2px 2px 6px rgba(36, 36, 36, 0.3);
+}
+
+.token-button-no-hover:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.balance-container {
+  h6 {
+    display: inline;
+  }
+
+  p {
+    display: inline;
+  }
+
+  .rs-col {
+    display: inline;
+  }
+}
+
+.progress-label {
+  text-align: center;
+  display: inline-block;
+  margin-right: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.9em;
+
+  .rs-progress {
+    width: 6vh;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  p {
+    display: block;
+    margin-top: 12px;
+  }
+}
+
+.verified {
+  display: block;
+  width: 25%;
+  height: 25%;
+  background-image: url('/img/verified-badge.png');
+  background-size: contain;
+  border-radius: 50%;
+  position: absolute;
+  right: 2%;
+  bottom: 6%;
+  z-index: 10;
+}
+
+.green-badge > .rs-badge-content {
+  background: #4caf50;
+}
+
+/* This ensures the promo badge stays relative to the thumbnail */
+.thumbnail {
+  position: relative;
+}
+
+.promo-badge {
+  display: block;
+  width: 2em;
+  height: 2em;
+  background-image: url('/img/promo-badge.png');
+  background-size: contain;
+  border-radius: 50%;
+  position: absolute;
+  top: -1em;
+  right: -1em;
+  z-index: 10;
+}

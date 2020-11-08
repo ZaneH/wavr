@@ -1,0 +1,16 @@
+fragment reviewFragment on Review {
+  id
+  stars
+  message
+  updatedAt
+  createdAt
+  product {
+    ...productFragment
+    owner {
+      ...userDisplayFragment
+    }
+  }
+  author {
+    ...userDisplayFragment
+  }
+}

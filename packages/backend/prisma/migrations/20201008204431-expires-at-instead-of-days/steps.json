@@ -1,0 +1,17 @@
+{
+  "version": "0.3.14-fixed",
+  "steps": [
+    {
+      "tag": "CreateField",
+      "model": "Ad",
+      "field": "expiresAt",
+      "type": "DateTime",
+      "arity": "Required"
+    },
+    {
+      "tag": "DeleteField",
+      "model": "Ad",
+      "field": "days"
+    }
+  ]
+}

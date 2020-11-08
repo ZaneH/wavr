@@ -1,0 +1,7 @@
+query Withdraws($where: QueryWithdrawsWhereInput) {
+    withdraws(where: $where) {
+        id
+        approved
+        createdAt
+    }
+}

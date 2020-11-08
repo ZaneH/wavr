@@ -1,0 +1,6 @@
+query OneTimeCodes($where: QueryOneTimeCodesWhereInput) {
+    oneTimeCodes(where: $where) {
+        id
+        expired
+    }
+}

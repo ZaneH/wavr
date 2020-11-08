@@ -1,0 +1,11 @@
+mutation CreatePromoCode($data: PromoCodeCreateInput!) {
+    createOnePromoCode(data: $data) {
+        ...promoCodeFragment
+    }
+}
+
+mutation DeleteOnePromoCode($where: PromoCodeWhereUniqueInput!) {
+    deleteOnePromoCode(where: $where) {
+        id
+    }
+}

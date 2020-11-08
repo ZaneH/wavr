@@ -1,0 +1,5 @@
+mutation CreateReport($data: ReportCreateInput!) {
+  createOneReport(data: $data) {
+    id
+  }
+}

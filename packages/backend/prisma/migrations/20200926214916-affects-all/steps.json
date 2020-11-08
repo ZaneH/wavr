@@ -1,0 +1,12 @@
+{
+  "version": "0.3.14-fixed",
+  "steps": [
+    {
+      "tag": "CreateField",
+      "model": "PromoCode",
+      "field": "affectsAll",
+      "type": "Boolean",
+      "arity": "Required"
+    }
+  ]
+}

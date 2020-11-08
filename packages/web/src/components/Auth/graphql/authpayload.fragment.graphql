@@ -1,0 +1,6 @@
+fragment authPayloadFragment on AuthPayload {
+    token
+    user {
+        ...userDisplayFragment
+    }
+}

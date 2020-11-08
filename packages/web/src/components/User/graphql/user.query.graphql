@@ -1,0 +1,40 @@
+query User($where: UserWhereUniqueInput!) {
+  user(where: $where) {
+    ...userFragment
+  }
+}
+
+query UserDisplay($where: UserWhereUniqueInput!) {
+  user(where: $where) {
+    ...userDisplayFragment
+  }
+}
+
+query UserBalance($where: UserWhereUniqueInput!) {
+  user(where: $where) {
+    ...userBalanceFragment
+  }
+}
+
+query UserProducts(
+  $where: UserWhereUniqueInput!
+  $orderBy: [UserProductsOrderByInput!]
+  $after: ProductWhereUniqueInput
+  $first: Int
+  $productsWhere: UserProductsWhereInput
+) {
+  user(where: $where) {
+    productQuotaPercent
+    storageQuotaPercent
+    products(where: $productsWhere, orderBy: $orderBy, after: $after, first: $first) {
+      ...productDisplayFragment
+      tags {
+        id
+        name
+      }
+      owner {
+          ...userDisplayFragment
+      }
+    }
+  }
+}
