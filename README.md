@@ -1,3 +1,5 @@
+<img align="right" src="https://i.imgur.com/bvcSmes.png" height="28px" width="auto" />
+
 # Wavr
 A free marketplace for creators
 
@@ -22,3 +24,6 @@ This project wasn't intended to be open-sourced, but during beta, I found a comp
 1. Upload to ECR
 2. Create a new Task Definition
 3. Update the service (no changes necessary)
+
+## Preview
+<img src="https://i.imgur.com/ztQTRBV.png" />
